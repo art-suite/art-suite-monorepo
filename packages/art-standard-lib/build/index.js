@@ -184,7 +184,7 @@ module.exports = require('neptune-namespaces' /* ABC - not inlining fellow NPM *
 /*! exports provided: author, bugs, dependencies, description, devDependencies, homepage, license, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"author\":\"Shane Brinkman-Davis Delamore, Imikimi LLC\",\"bugs\":\"https:/github.com/imikimi/art-standard-lib/issues\",\"dependencies\":{\"art-build-configurator\":\"*\",\"pluralize\":\"*\"},\"description\":\"The Standard Library for JavaScript that aught to be.\",\"devDependencies\":{\"art-testbench\":\"*\",\"case-sensitive-paths-webpack-plugin\":\"^2.2.0\",\"chai\":\"^4.2.0\",\"coffee-loader\":\"^0.7.3\",\"css-loader\":\"^3.0.0\",\"json-loader\":\"^0.5.7\",\"mocha\":\"^6.2.0\",\"mock-fs\":\"^4.10.0\",\"script-loader\":\"^0.7.2\",\"style-loader\":\"^1.0.0\",\"webpack\":\"^4.39.1\",\"webpack-cli\":\"*\",\"webpack-dev-server\":\"^3.7.2\",\"webpack-merge\":\"^4.2.1\",\"webpack-node-externals\":\"^1.7.2\",\"webpack-stylish\":\"^0.1.8\"},\"homepage\":\"https://github.com/imikimi/art-standard-lib\",\"license\":\"ISC\",\"name\":\"art-standard-lib\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/imikimi/art-standard-lib.git\"},\"scripts\":{\"build\":\"webpack --progress\",\"start\":\"webpack-dev-server --hot --inline --progress --env.devServer\",\"test\":\"nn -s;mocha -u tdd\",\"testInBrowser\":\"webpack-dev-server --progress --env.devServer\"},\"version\":\"1.63.0\"}");
+module.exports = JSON.parse("{\"author\":\"Shane Brinkman-Davis Delamore, Imikimi LLC\",\"bugs\":\"https:/github.com/art-suite/art-suite-monorepo/issues\",\"dependencies\":{\"art-build-configurator\":\"*\",\"pluralize\":\"*\"},\"description\":\"The Standard Library for JavaScript that aught to be.\",\"devDependencies\":{\"art-testbench\":\"*\",\"case-sensitive-paths-webpack-plugin\":\"^2.2.0\",\"chai\":\"^4.2.0\",\"coffee-loader\":\"^0.7.3\",\"css-loader\":\"^3.0.0\",\"json-loader\":\"^0.5.7\",\"mocha\":\"^6.2.0\",\"mock-fs\":\"^4.10.0\",\"script-loader\":\"^0.7.2\",\"style-loader\":\"^1.0.0\",\"webpack\":\"^4.39.1\",\"webpack-cli\":\"*\",\"webpack-dev-server\":\"^3.7.2\",\"webpack-merge\":\"^4.2.1\",\"webpack-node-externals\":\"^1.7.2\",\"webpack-stylish\":\"^0.1.8\"},\"homepage\":\"https://github.com/art-suite/art-suite-monorepo\",\"license\":\"ISC\",\"name\":\"art-standard-lib\",\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/art-suite/art-suite-monorepo.git\"},\"scripts\":{\"build\":\"webpack --progress\",\"start\":\"webpack-dev-server --hot --inline --progress --env.devServer\",\"test\":\"nn -s;mocha -u tdd\",\"testInBrowser\":\"webpack-dev-server --progress --env.devServer\"},\"version\":\"1.64.1\"}");
 
 /***/ }),
 /* 5 */
@@ -304,7 +304,7 @@ module.exports = ArrayCompactFlatten = (function() {
   function ArrayCompactFlatten() {}
 
   ArrayCompactFlatten.isArrayOrArguments = isArrayOrArguments = function(o) {
-    return isArray(o) || (typeof (o != null ? o.length : void 0) === "number" && o.toString() === '[object Arguments]' ? (console.warn("DEPRICATED compactFlatten* no longer supports Arguments objects"), true) : false);
+    return isArray(o) || (typeof (o != null ? o.length : void 0) === "number" && o.toString() === '[object Arguments]' ? (console.error("DEPRICATED compactFlatten* no longer supports Arguments objects"), true) : false);
   };
 
   ArrayCompactFlatten.needsFlatteningOrCompacting = function(array, keepTester) {
@@ -1274,7 +1274,7 @@ module.exports = Merge = (function() {
 /* WEBPACK VAR INJECTION */(function(module) {var BlueBirdPromise, ErrorWithInfo, Promise, deepEach, deepMap, defineModule, getEnv, isFunction, isPlainObject, isPromise, namespace, promiseDebug, ref,
   slice = [].slice;
 
-Promise = BlueBirdPromise = __webpack_require__(/*! bluebird/js/browser/bluebird.core.min */ 17);
+Promise = BlueBirdPromise = __webpack_require__(/*! bluebird */ 17);
 
 ref = __webpack_require__(/*! ./TypesExtended */ 18), deepMap = ref.deepMap, deepEach = ref.deepEach, isFunction = ref.isFunction, isPlainObject = ref.isPlainObject;
 
@@ -1728,13 +1728,13 @@ defineModule(module, function() {
   return BlueBirdPromise;
 });
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/module.js */ 16)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/module.js */ 16)(module)))
 
 /***/ }),
 /* 16 */
-/*!*************************************************!*\
-  !*** ../node_modules/webpack/buildin/module.js ***!
-  \*************************************************/
+/*!***********************************!*\
+  !*** (webpack)/buildin/module.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1764,13 +1764,13 @@ module.exports = function(module) {
 
 /***/ }),
 /* 17 */
-/*!********************************************************************************************************!*\
-  !*** external "require('bluebird/js/browser/bluebird.core.min' /* ABC - not inlining fellow NPM *_/)" ***!
-  \********************************************************************************************************/
+/*!***************************************************************************!*\
+  !*** external "require('bluebird' /* ABC - not inlining fellow NPM *_/)" ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require('bluebird/js/browser/bluebird.core.min' /* ABC - not inlining fellow NPM */);
+module.exports = require('bluebird' /* ABC - not inlining fellow NPM */);
 
 /***/ }),
 /* 18 */
@@ -2250,7 +2250,7 @@ defineModule(module, Environment = (function() {
 
 })());
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/module.js */ 16)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/module.js */ 16)(module)))
 
 /***/ }),
 /* 21 */
@@ -2260,10 +2260,12 @@ defineModule(module, Environment = (function() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ParseUrl, escapeRegExp, findUrlOrigin, ref,
+var ParseUrl, compactFlatten, escapeRegExp, findUrlOrigin, ref,
   slice = [].slice;
 
 ref = __webpack_require__(/*! ./RegExpExtensions */ 22), escapeRegExp = ref.escapeRegExp, findUrlOrigin = ref.findUrlOrigin;
+
+compactFlatten = __webpack_require__(/*! ./Core */ 9).compactFlatten;
 
 module.exports = ParseUrl = (function() {
   var generateQuery, parsedGlobalQuery;
@@ -2327,10 +2329,11 @@ module.exports = ParseUrl = (function() {
     var path, paths, uri;
     uri = arguments[0], paths = 2 <= arguments.length ? slice.call(arguments, 1) : [];
     return (uri.replace(/\/$/, '')) + "/" + (((function() {
-      var j, len, results;
+      var j, len, ref1, results;
+      ref1 = compactFlatten(paths);
       results = [];
-      for (j = 0, len = paths.length; j < len; j++) {
-        path = paths[j];
+      for (j = 0, len = ref1.length; j < len; j++) {
+        path = ref1[j];
         results.push(path.replace(/^\/|\/$/g, ''));
       }
       return results;
@@ -2591,7 +2594,7 @@ defineModule(module, ErrorWithInfo = (function(superClass) {
 
 })(Error));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/module.js */ 16)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/module.js */ 16)(module)))
 
 /***/ }),
 /* 25 */
@@ -6258,6 +6261,8 @@ module.exports = ArrayExtensions = (function() {
     }
   };
 
+  ArrayExtensions.pushUnique = ArrayExtensions.pushIfNotPresent;
+
 
   /*
   IN:
@@ -6407,6 +6412,8 @@ module.exports = ArrayExtensions = (function() {
     }
     return array;
   };
+
+  ArrayExtensions.arrayWithUnique = ArrayExtensions.arrayWithOne;
 
   ArrayExtensions.slice = function(a, b, c) {
     return arraySlice.call(a, b, c);
@@ -8982,7 +8989,7 @@ defineModule(module, RequestError = (function(superClass) {
 
 })(Error));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/module.js */ 16)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/module.js */ 16)(module)))
 
 /***/ })
 /******/ ]);
