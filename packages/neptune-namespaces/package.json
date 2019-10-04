@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "art-build-configurator": "*",
-    "neptune-namespaces-runtime": "^3.1.2"
+    "neptune-namespaces-runtime": "file:../neptune-namespaces-runtime"
   },
   "description": "Generate index.coffee and namespace.coffee files from directory structures",
   "license": "ISC",
