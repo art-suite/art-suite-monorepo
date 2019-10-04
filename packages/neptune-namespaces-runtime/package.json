@@ -1,7 +1,7 @@
 {
   "author": "Shane Brinkman-Davis Delamore, Imikimi LLC\"",
   "dependencies": {
-    "art-standard-lib": "*",
+    "art-standard-lib": "^1.64.1",
     "coffee-script": "*"
   },
   "description": "Neptune.Namespaces.Runtime",
@@ -13,5 +13,5 @@
     "test": "nn -s;mocha -u tdd",
     "testInBrowser": "webpack-dev-server --progress --env.devServer"
   },
-  "version": "3.1.1"
+  "version": "3.1.2"
 }

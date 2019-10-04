@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "art-build-configurator": "*",
-    "neptune-namespaces-runtime": "*"
+    "neptune-namespaces-runtime": "^3.1.2"
   },
   "description": "Generate index.coffee and namespace.coffee files from directory structures",
   "license": "ISC",
@@ -17,5 +17,5 @@
     "test": "nn -s;mocha -u tdd",
     "testInBrowser": "webpack-dev-server --progress --env.devServer"
   },
-  "version": "4.0.0"
+  "version": "4.0.1"
 }
